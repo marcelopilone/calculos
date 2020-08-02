@@ -88,6 +88,14 @@ export class AppRoot {
     this.resultado = event.target.value;
   }
 
+  mostrarMensaje(mensajito){
+    return(<ion-item>
+            <ion-text color={this.estilo}>
+                {mensajito}
+            </ion-text>
+        </ion-item>);
+  }
+
   render() {
     return [
       <div>
@@ -109,15 +117,11 @@ export class AppRoot {
             </ion-item>
             <ion-item>
                   <ion-label position="fixed">Resultado = </ion-label>
-                  <ion-input type="number" value={this.resultado} onInput={(event) => this.handleChangeResultado(event)} placeholder="XXXX" required></ion-input>
+                  <ion-input type="number" color="primary" value={this.resultado} onInput={(event) => this.handleChangeResultado(event)} placeholder="XXXX" required></ion-input>
             </ion-item><br/>
               <ion-button type="submit" expand="block" id="botonResolver" color="success">Resolver</ion-button>
         </form><br/>
-        <ion-item>
-            <ion-label color={this.estilo}>
-                {this.mensaje} 
-            </ion-label>
-        </ion-item>
+        {this.mostrarMensaje(this.mensaje)}
       </div>
     ];
   }
