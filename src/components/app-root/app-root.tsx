@@ -42,7 +42,23 @@ export class AppRoot {
     console.log(this.queOperacion);
     console.log(this.segundoNumero);
     console.log(this.resultado);
-    // send data to our backend
+
+    var reducer = (accumulator, currentValue) => accumulator + currentValue;
+    if(this.queOperacion=='-'){
+      reducer = (accumulator, currentValue) => accumulator - currentValue;
+    }
+    if(this.queOperacion=='*'){
+       reducer = (accumulator, currentValue) => accumulator * currentValue; 
+    }
+    if(this.queOperacion=='/'){
+       reducer = (accumulator, currentValue) => accumulator / currentValue;  
+    }
+
+    let arrayRandom = [this.primerNumero, this.segundoNumero];
+
+    let resultadoFinal = arrayRandom.reduce(reducer);
+    
+    console.log(resultadoFinal);
   }
 
   handleChangePrimerNumero(event) {
