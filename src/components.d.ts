@@ -13,6 +13,8 @@ export namespace Components {
         "match": MatchResults;
     }
     interface AppRoot {
+        "estilo": string;
+        "mensaje": string;
         "primerNumero": number;
         "queOperacion": string;
         "resultado": number;
@@ -51,6 +53,8 @@ declare namespace LocalJSX {
         "match"?: MatchResults;
     }
     interface AppRoot {
+        "estilo"?: string;
+        "mensaje"?: string;
         "primerNumero"?: number;
         "queOperacion"?: string;
         "resultado"?: number;
