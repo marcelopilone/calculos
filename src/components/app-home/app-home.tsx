@@ -3,24 +3,29 @@ import { Component, h } from '@stencil/core';
 @Component({
   tag: 'app-home',
   styleUrl: 'app-home.css',
-  shadow: true
 })
 export class AppHome {
 
   render() {
     return (
-      <div class='app-home'>
-        <p>
-          Welcome to the Stencil App Starter.
-          You can use this starter to build entire apps all with
-          web components using Stencil!
-          Check out our docs on <a href='https://stenciljs.com'>stenciljs.com</a> to get started.
-        </p>
+      <div><br/><br/>
+        <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+              <ion-card-title>Card Title</ion-card-title>
+            </ion-card-header>
 
+            <ion-card-content>
+              Keep close to Nature's heart... and break clear away, once in awhile,
+              and climb a mountain or spend a week in the woods. Wash your spirit clean.
+            </ion-card-content>
+        </ion-card>
+        <ion-text color="secondary">a ver este textito</ion-text><br/>      
+        <ion-router-link href='/profile/stencil' color="primary">Perfil</ion-router-link><br/>
         <stencil-route-link url='/profile/stencil'>
-          <button>
-            Profile page
-          </button>
+          <ion-button color="danger">
+            Volver al inicio
+          </ion-button>
         </stencil-route-link>
       </div>
     );
