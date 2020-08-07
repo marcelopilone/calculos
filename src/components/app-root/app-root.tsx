@@ -119,7 +119,7 @@ export class AppRoot {
                   <ion-label position="fixed">Resultado = </ion-label>
                   <ion-input type="number" color="primary" value={this.resultado} onInput={(event) => this.handleChangeResultado(event)} placeholder="XXXX" required></ion-input>
             </ion-item><br/>
-              <ion-button type="submit" expand="block" id="botonResolver" color="success">Resolver</ion-button>
+            <ion-button type="submit" expand="block" id="botonResolver">Resolver</ion-button>
         </form><br/>
         {this.mostrarMensaje(this.mensaje)}
       </div>
