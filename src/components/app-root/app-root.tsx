@@ -1,4 +1,4 @@
-import { Component, h,Prop } from '@stencil/core';
+import { Component, h,Prop,Watch } from '@stencil/core';
 
 
 @Component({
@@ -28,6 +28,14 @@ export class AppRoot {
   @Prop() mensaje:string = '';
 
   @Prop() estilo:string = '';
+
+  @Prop() probandoUnaCadena: string = "yo dije primero hola";
+
+  @Watch('probandoUnaCadena')
+  watchHandler(newValue, oldValue) {
+    console.log('El nuevo valor es: ', newValue);
+    console.log('El viejo valor es: ', oldValue);
+  }
 
   randomInt(min,max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -122,6 +130,7 @@ export class AppRoot {
             <ion-button type="submit" expand="block" id="botonResolver">Resolver</ion-button>
         </form><br/>
         {this.mostrarMensaje(this.mensaje)}
+        {this.probandoUnaCadena="yo dije despues hola"}
       </div>
     ];
   }

@@ -16,6 +16,7 @@ export namespace Components {
         "estilo": string;
         "mensaje": string;
         "primerNumero": number;
+        "probandoUnaCadena": string;
         "queOperacion": string;
         "resultado": number;
         "segundoNumero": number;
@@ -56,6 +57,7 @@ declare namespace LocalJSX {
         "estilo"?: string;
         "mensaje"?: string;
         "primerNumero"?: number;
+        "probandoUnaCadena"?: string;
         "queOperacion"?: string;
         "resultado"?: number;
         "segundoNumero"?: number;
